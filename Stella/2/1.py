@@ -19,8 +19,6 @@ def main():
     file1 = open('Stella/2/input.txt', 'r')
     Lines = file1.readlines()
     
-    # print(Lines)
-    #Strips the newline character
     total = 0
 
     for line in Lines:
