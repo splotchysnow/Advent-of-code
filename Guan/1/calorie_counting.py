@@ -19,13 +19,12 @@ def timer_func(func):
 
 @timer_func
 def main():
-    file1 = open("1/input.txt",'r')
+    file1 = open("Guan/1/input.txt",'r')
     lines = file1.readlines()
     elfList = [0]
     i = 0
     for line in lines:
         if line == "\n":
-            # New elf count
             i+=1
             elfList.append(0)
         else:
