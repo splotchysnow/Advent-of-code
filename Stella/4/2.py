@@ -1,31 +1,19 @@
-# Day 2: Rock Paper Scissors
-outScore = {
-  'X': 0,
-  'Y': 3,
-  'Z': 6
-}
-
-# X for Lose, Y for Draw,  and Z for Win.
-# A for Rock, B for Paper, and C for Scissors.
-# Socre:1,2,3
-shapeScore = {
-    'X' : { 'A': 3, 'B': 1, 'C': 2}, 
-    'Y' : { 'A': 1, 'B': 2, 'C': 3},
-    'Z' : { 'A': 2, 'B': 3, 'C': 1},
-}
+# Day 4: Camp Cleanup
 
 def main():
 
-
-    file1 = open('Stella/2/input.txt', 'r')
+    file1 = open('Stella/4/input.txt', 'r')
     Lines = file1.readlines()
     
-    total = 0
+    contains = 0
 
     for line in Lines:
-        x = line.strip('\n').split(' ')
-        total += outScore[x[1]] + shapeScore[x[1]][x[0]]
+        pairs = line.strip('\n').split(',')
+        first = set(range(int(pairs[0].split('-')[0]), int(pairs[0].split('-')[1])+1))
+        second = set(range(int(pairs[1].split('-')[0]), int(pairs[1].split('-')[1])+1))
+        if (len(first.intersection(second))):
+            contains += 1
 
-    print('Total score if everything goes exactly according to my strategy guide is ' + str(total))
+    print(str(contains) + ' pairs overlap')
 
 main()
