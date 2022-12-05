@@ -11,6 +11,7 @@ def main():
         pairs = line.strip('\n').split(',')
         first = set(range(int(pairs[0].split('-')[0]), int(pairs[0].split('-')[1])+1))
         second = set(range(int(pairs[1].split('-')[0]), int(pairs[1].split('-')[1])+1))
+        print(first, second)
         if (len(first.intersection(second))):
             contains += 1
 
