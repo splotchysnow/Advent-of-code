@@ -12,15 +12,13 @@ def main():
         # print(len(line))
         for ch in line:
             count += 1
-            if(count>2299):
-                print(ch)
             nums[count%14] = ch
             for x in nums:
                 if(x.isalpha()):
                     s.add(x)
             # print(s)
             if(len(s)==14):
-                print(count-14)
+                print(count)
                 break
             else:
                 s.clear()
