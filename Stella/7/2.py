@@ -1,4 +1,4 @@
-# Day 5: Supply Stacks
+# Day 7: Supply Stacks
 
 def main():
 
