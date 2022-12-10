@@ -1,4 +1,4 @@
-# Day 6: Tuning Trouble
+# Day 10: Cathode-Ray Tube
 
 # returns count based on if the Point is already visited
 class Point:
