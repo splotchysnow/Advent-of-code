@@ -24,7 +24,6 @@ def main():
                 x+=1
                 ops = Lines[x].strip('\n').replace(',', '').split()[3:]
                 operations[Monkey_num] = ops
-                
 
                 x+=1
                 tests.append(int(Lines[x].strip('\n').replace(',', '').split()[3]))
@@ -37,11 +36,9 @@ def main():
                 
                 Monkey_num += 1
 
-    result1 = 1
-    print(tests)
+    to_minus = 1
     for x in tests:
-        result1 = result1 * x
-    print(result1)
+        to_minus = to_minus * x
 
     for rounds in range(10000):
         for iter in  range(8):
@@ -60,24 +57,14 @@ def main():
                     new = n1 + n2
                 else:
                     new = n1 * n2
-                new = new%result1
+                new = new%to_minus
                 if new%tests[iter] == 0:
                     items[trues[iter]].append(new)
                 else:
                     items[falses[iter]].append(new)
-                # print(int(new))
             items[iter].clear()
-            # print(items)
 
-    # print(items)
-    # print(operations)
-    # print(tests)
-    # print(trues)
-    # print(falses)
     throw_times.sort(reverse=True)
-    print(throw_times)
     print(throw_times[0]*throw_times[1])
-
-
 
 main()
