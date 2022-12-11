@@ -55,8 +55,10 @@ class Person:
 # print [0][4], [1][4], ....
 class Grid:
     p = Person()
-    y_int =  [Point() for i in range(5)]
-    grid = [y_int, y_int, y_int, y_int, y_int, y_int]
+    y_int =  [Point() for i in range(100)]
+    grid = []
+    for iii in range(100):
+        grid.append(y_int)
     def _init_(self):
         return 0
     def printGrid(self):
